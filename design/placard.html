@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>GAIN World Food Day 2026 placard</title>
+<style>
+@font-face{font-family:"Montserrat";font-weight:400;src:url("assets/montserrat-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"Montserrat";font-weight:700;src:url("assets/montserrat-latin-700-normal.woff2") format("woff2")}
+@font-face{font-family:"Montserrat";font-weight:800;src:url("assets/montserrat-latin-800-normal.woff2") format("woff2")}
+@font-face{font-family:"Montserrat";font-weight:900;src:url("assets/montserrat-latin-900-normal.woff2") format("woff2")}
+@page{size:var(--pw,420mm) var(--ph,297mm);margin:0}
+:root{--red:#98103A;--yellow:#FFD80D;--orange:#FDA509;--white:#FFFFFF;--black:#1D1D1B}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:420mm;height:297mm;background:#fff;font-family:"Montserrat",Arial,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{position:relative;width:420mm;height:297mm;overflow:hidden}
+/* artwork: 404 x 281 mm, inset 8mm */
+.art{position:absolute;left:8mm;top:8mm;width:404mm;height:281mm;background:var(--red);color:#fff}
+.keyline{position:absolute;left:7mm;top:7mm;right:7mm;bottom:7mm;border:0.6mm solid rgba(255,255,255,.55);border-radius:3mm}
+/* cutout window */
+.window{position:absolute;left:34mm;top:38mm;width:336mm;height:181mm;background:#fff;border-radius:4mm}
+.window .cut{position:absolute;inset:0;border:0.5mm dashed var(--red);border-radius:4mm}
+.window .hint{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);text-align:center;color:#8a8a8a;font-size:11pt;line-height:1.5}
+.window .hint b{display:block;font-size:14pt;color:var(--red);font-weight:800;letter-spacing:.08em;margin-bottom:2mm}
+.window .scissors{position:absolute;left:-7mm;top:-7mm;width:12mm;height:12mm;fill:#fff}
+/* corner marks inside window */
+.cm{position:absolute;width:10mm;height:10mm;border-color:var(--red);border-style:solid;border-width:0}
+.cm.tl{left:-0.5mm;top:-0.5mm;border-left-width:.5mm;border-top-width:.5mm;border-top-left-radius:4mm}
+.cm.tr{right:-0.5mm;top:-0.5mm;border-right-width:.5mm;border-top-width:.5mm;border-top-right-radius:4mm}
+.cm.bl{left:-0.5mm;bottom:-0.5mm;border-left-width:.5mm;border-bottom-width:.5mm;border-bottom-left-radius:4mm}
+.cm.br{right:-0.5mm;bottom:-0.5mm;border-right-width:.5mm;border-bottom-width:.5mm;border-bottom-right-radius:4mm}
+/* top: theme */
+.top{position:absolute;left:0;right:0;top:7mm;height:31mm;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:24pt;letter-spacing:.05em;white-space:nowrap}
+.top .y{color:var(--yellow);margin-left:5mm}
+/* side words */
+.side{position:absolute;top:38mm;height:181mm;width:20mm;display:flex;align-items:center;justify-content:center}
+.side.l{left:10mm}.side.r{right:10mm}
+.side span{display:block;transform:rotate(-90deg);white-space:nowrap;font-weight:700;font-size:16pt;letter-spacing:.16em;color:#fff}
+.side.r span{transform:rotate(90deg)}
+.side b{color:var(--yellow);font-weight:800}
+/* bottom: logo + greeting, centred */
+.foot{position:absolute;left:0;right:0;top:219mm;bottom:7mm;display:flex;align-items:center;justify-content:center;gap:10mm}
+.foot .logo{height:30mm;display:block}
+.foot .rule{width:.7mm;height:30mm;background:rgba(255,255,255,.7)}
+.foot .happy{font-weight:900;font-size:36pt;line-height:1.05;letter-spacing:.03em;text-transform:uppercase}
+.foot .happy span{display:block}
+.foot .happy .y{color:var(--yellow)}
+/* trim marks on the white page */
+.trim{position:absolute;width:6mm;height:6mm}
+.trim:before,.trim:after{content:"";position:absolute;background:#000}
+.trim:before{width:6mm;height:.2mm}.trim:after{width:.2mm;height:6mm}
+.trim.tl{left:1mm;top:1mm}.trim.tl:before{left:0;top:7mm}.trim.tl:after{left:7mm;top:0}
+.trim.tr{right:1mm;top:1mm}.trim.tr:before{right:0;top:7mm}.trim.tr:after{right:7mm;top:0}
+.trim.bl{left:1mm;bottom:1mm}.trim.bl:before{left:0;bottom:7mm}.trim.bl:after{left:7mm;bottom:0}
+.trim.br{right:1mm;bottom:1mm}.trim.br:before{right:0;bottom:7mm}.trim.br:after{right:7mm;bottom:0}
+.note{position:absolute;left:8mm;bottom:2.2mm;font-size:7pt;color:#777;letter-spacing:.02em}
+.page{transform-origin:0 0}
+
+.page{page-break-after:always}.page:last-child{page-break-after:auto}
+.headline{position:absolute;left:34mm;top:66mm;font-weight:900;font-size:54pt;line-height:1.02;letter-spacing:.01em;text-transform:uppercase}
+.headline .y{display:block;color:var(--yellow)}
+.bowl{position:absolute;right:30mm;top:40mm;width:124mm;height:92mm;object-fit:contain;object-position:right bottom}
+.write{position:absolute;left:34mm;right:34mm;top:130mm;height:80mm;background:#fff;border-radius:4mm;color:var(--black)}
+.write .lbl{position:absolute;left:12mm;top:10mm;font-weight:800;font-size:20pt;color:var(--red);letter-spacing:.05em}
+.write .line{position:absolute;left:12mm;right:12mm;bottom:20mm;border-bottom:.7mm solid #B9B8B8}
+.write .hint{position:absolute;right:12mm;bottom:9mm;font-size:10pt;color:#8a8a8a}
+.foot .when{font-weight:800;font-size:22pt;line-height:1.25;letter-spacing:.04em;text-align:left}
+.foot .when span{display:block;font-weight:400;font-size:16pt;color:var(--yellow);letter-spacing:.02em}
+/* white variant */
+.page.w .art{background:#fff;color:var(--black)}
+.page.w .keyline{border-color:var(--red)}
+.page.w .top,.page.w .side span,.page.w .foot .when{color:var(--black)}
+.page.w .top .y,.page.w .side b,.page.w .headline .y,.page.w .foot .when span{color:var(--red)}
+.page.w .headline{color:var(--black)}
+.page.w .write{border:.6mm solid var(--black)}
+.page.w .foot .rule{background:var(--red)}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="trim tl"></div><div class="trim tr"></div><div class="trim bl"></div><div class="trim br"></div>
+  <div class="art">
+    <div class="keyline"></div>
+    <div class="top">INNOVATE TODAY.<span class="y">NOURISH TOMORROW.</span></div>
+    <div class="side l"><span><b>GAIN</b>HEALTH.ORG</span></div>
+    <div class="side r"><span>#WORLDFOODDAY</span></div>
+    <div class="headline">Happy<span class="y">World Food Day</span></div>
+    <img class="bowl" src="assets/bowl-white.svg" alt="">
+    <div class="write"><span class="lbl">GREETINGS FROM GAIN</span><span class="line"></span><span class="hint">write your country here</span></div>
+    <div class="foot">
+      <img class="logo" src="assets/gain-logo-white.png" alt="GAIN – Global Alliance for Improved Nutrition">
+      <div class="rule"></div>
+      <div class="when">16 OCTOBER 2026<span>World Food Day</span></div>
+    </div>
+  </div>
+  <div class="note">Placard, option A (GAIN red) · A2 landscape (59.4 × 42 cm) · trim to the corner marks · print at 100% on card, or on paper and mount on cardboard</div>
+</div>
+<div class="page w">
+  <div class="trim tl"></div><div class="trim tr"></div><div class="trim bl"></div><div class="trim br"></div>
+  <div class="art">
+    <div class="keyline"></div>
+    <div class="top">INNOVATE TODAY.<span class="y">NOURISH TOMORROW.</span></div>
+    <div class="side l"><span><b>GAIN</b>HEALTH.ORG</span></div>
+    <div class="side r"><span>#WORLDFOODDAY</span></div>
+    <div class="headline">Happy<span class="y">World Food Day</span></div>
+    <img class="bowl" src="assets/bowl-black.svg" alt="">
+    <div class="write"><span class="lbl">GREETINGS FROM GAIN</span><span class="line"></span><span class="hint">write your country here</span></div>
+    <div class="foot">
+      <img class="logo" src="assets/gain-logo.png" alt="GAIN – Global Alliance for Improved Nutrition">
+      <div class="rule"></div>
+      <div class="when">16 OCTOBER 2026<span>World Food Day</span></div>
+    </div>
+  </div>
+  <div class="note">Placard, option B (white, ink-saving) · A2 landscape (59.4 × 42 cm) · trim to the corner marks · print at 100% on card, or on paper and mount on cardboard</div>
+</div>
+</body>
+</html>
